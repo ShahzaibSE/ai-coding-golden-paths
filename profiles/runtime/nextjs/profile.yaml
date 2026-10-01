@@ -1,0 +1,14 @@
+name: nextjs
+version: 0.1.0
+category: runtime
+description: Next.js App Router frontend with TypeScript - component and server/client boundaries, data access, and testing.
+summary:
+  - TypeScript strict mode; no implicit any, no unchecked casts at boundaries.
+  - Components are Server Components by default; add "use client" only at the smallest leaf that needs interactivity.
+  - Server-only code (secrets, database access) never imports into client components.
+  - Unit-test components with a DOM testing library; cover critical journeys with a few end-to-end tests.
+applies_to:
+  - "**/*.ts"
+  - "**/*.tsx"
+  - "app/**"
+  - "next.config.*"

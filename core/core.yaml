@@ -1,0 +1,24 @@
+name: core
+version: 0.1.0
+category: core
+description: Universal, stack-independent engineering standards, workflows, and privacy baseline.
+summary:
+  - Read docs/engineering/PROJECT.md before changing anything; keep it current when architecture or commands change.
+  - Make the smallest change that solves the problem; do not refactor unrelated code in the same change.
+  - Every behavior change ships with tests that would fail without it; run the relevant tests before declaring work done.
+  - Never commit secrets, credentials, or personal data; treat all external input as untrusted.
+  - For multi-step or risky work, write a plan first and follow the implementation workflow.
+  - Report outcomes honestly - say what was verified, what was not, and what failed.
+documents:
+  - standards/engineering.md
+  - standards/testing.md
+  - standards/security.md
+  - standards/git-workflow.md
+  - governance/privacy-baseline.md
+workflows:
+  - id: implementation
+    file: workflows/implementation.md
+    description: Use for any non-trivial change - features, bug fixes, refactors - to plan, implement, test, and verify in small steps.
+  - id: code-review
+    file: workflows/code-review.md
+    description: Use to review a diff or pull request against the project's standards and active profiles before it is merged.

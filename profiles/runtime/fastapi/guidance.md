@@ -1,0 +1,36 @@
+# FastAPI
+
+FastAPI-specific conventions. The python-backend profile defines layering, errors, async, and testing; this profile only covers how FastAPI implements them.
+
+## Application structure
+
+- Create the app in a factory function (`create_app(settings)`) so tests can build isolated instances.
+- Group endpoints into `APIRouter` modules by resource; include them in the factory with a prefix and tags.
+- Use lifespan handlers (not deprecated startup/shutdown events) to create and close shared clients and pools.
+
+## Request and response models
+
+- Declare explicit request and response models for every endpoint; set `response_model` so internal fields never leak.
+- Keep API models separate from domain and persistence models; convert at the router edge.
+- Use field constraints for validation (lengths, ranges, patterns) instead of manual checks in handlers.
+
+## Dependencies
+
+- Provide settings, database sessions, clients, and the current user through `Depends()` providers.
+- Keep providers small and composable; yield-based providers own cleanup (close sessions, release connections).
+- Authentication and authorization are dependencies applied at router or endpoint level, never ad hoc checks in handler bodies.
+
+## Errors
+
+- Register exception handlers that map the domain exceptions to HTTP status codes and a consistent error body.
+- Raise `HTTPException` only for HTTP-specific concerns in the router layer.
+
+## Sync vs async handlers
+
+- Declare `async def` handlers only when everything they call is non-blocking. Otherwise declare plain `def` so the framework runs them in its thread pool.
+
+## Testing
+
+- Test endpoints with the framework's test client (or an async HTTP client against the ASGI app) built from `create_app`.
+- Replace dependencies with `app.dependency_overrides` in tests; clear overrides after each test.
+- Assert on status codes, response bodies, and the OpenAPI schema for public contracts.

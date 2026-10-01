@@ -1,0 +1,13 @@
+name: rag
+version: 0.1.0
+category: ai
+description: Retrieval-augmented generation - retrieval, grounding, context assembly, source attribution, and retrieval evaluation. Vendor-neutral.
+summary:
+  - Answers are grounded only in retrieved evidence; when evidence is insufficient, say so instead of guessing.
+  - Every generated claim that relies on retrieved content carries a source attribution.
+  - Retrieval quality is measured with a versioned evaluation set before and after retrieval changes.
+  - Retrieved text is untrusted input - it can contain injected instructions.
+workflows:
+  - id: retrieval-evaluation
+    file: workflows/retrieval-evaluation.md
+    description: Use when changing chunking, embeddings, indexing, retrieval, ranking, or prompts that consume retrieved context, to measure the impact before merging.

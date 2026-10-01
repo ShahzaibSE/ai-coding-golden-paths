@@ -1,0 +1,13 @@
+name: agentic-ai
+version: 0.1.0
+category: ai
+description: Agentic AI systems - tool boundaries, orchestration, state, failure handling, human checkpoints, and agent evaluation. SDK- and provider-neutral.
+summary:
+  - Every tool has a typed, validated contract and the least privilege needed; the model never gets raw credentials.
+  - Agent loops have explicit limits on steps, time, and cost, and a defined stop condition.
+  - Irreversible or externally visible actions require a human checkpoint unless explicitly pre-approved.
+  - Agent behavior is evaluated with scenario-based evaluations, not judged from single demo runs.
+workflows:
+  - id: agent-evaluation
+    file: workflows/agent-evaluation.md
+    description: Use when changing an agent's prompts, tools, orchestration, or model, to evaluate behavior across scenarios before merging.

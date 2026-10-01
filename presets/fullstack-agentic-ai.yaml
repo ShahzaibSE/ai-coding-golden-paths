@@ -1,0 +1,6 @@
+name: fullstack-agentic-ai
+description: Python backend and Next.js frontend for an agentic AI application.
+profiles:
+  - runtime/python-backend
+  - runtime/nextjs
+  - ai/agentic-ai

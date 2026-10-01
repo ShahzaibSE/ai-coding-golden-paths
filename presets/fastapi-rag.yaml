@@ -1,0 +1,6 @@
+name: fastapi-rag
+description: Python FastAPI service with retrieval-augmented generation.
+profiles:
+  - runtime/python-backend
+  - runtime/fastapi
+  - ai/rag

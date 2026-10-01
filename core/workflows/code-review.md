@@ -1,0 +1,36 @@
+# Code Review Workflow
+
+Use to review a diff or pull request before merge. Review the change, not the author.
+
+## Procedure
+
+1. Read the description: what problem is solved, and how it was tested.
+2. Read the whole diff once for shape before commenting on details.
+3. Check each area below. Look up the relevant standards and active profile guidance in docs/engineering/.
+4. Report findings ordered by severity.
+
+## Checklist
+
+Correctness
+- Does the change do what it claims, including edge cases and failure paths?
+- Are errors handled or propagated with context, never swallowed?
+
+Tests
+- Is there a test that fails without this change?
+- Do tests check behavior rather than implementation details? Are they deterministic?
+
+Security and privacy
+- Is new input validated at the boundary? Any injection, authorization, or secret-handling risk?
+- Is personal data logged, sent to a new recipient, or retained without a defined period?
+
+Design
+- Is the change minimal and focused? Does it reuse existing code instead of duplicating it?
+- Does it follow the conventions of the surrounding code and the active profiles?
+
+Operations
+- Are configuration, migrations, and documentation updated?
+- Can the change be rolled back safely?
+
+## Reporting findings
+
+For each finding give: severity (blocking / should-fix / nit), location (file and line), the problem, a concrete failure scenario, and a suggested fix. State explicitly when no blocking issues were found. Do not invent findings to appear thorough.

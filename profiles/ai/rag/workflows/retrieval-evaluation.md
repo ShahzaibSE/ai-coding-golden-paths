@@ -1,0 +1,33 @@
+# Retrieval Evaluation Workflow
+
+Use before merging any change to chunking, embedding, indexing, retrieval, ranking, or prompts that consume retrieved context.
+
+## Evaluation set
+
+- Maintain a versioned evaluation set in the repository: questions, the ids of the passages that should be retrieved, and reference answers or key facts.
+- Include unanswerable questions whose correct outcome is the insufficient-evidence response.
+- Include questions that require access control, to confirm restricted content is never retrieved for unauthorized callers.
+- Grow the set from real failures: every reported bad answer becomes a new case (with personal data removed).
+
+## Metrics
+
+Retrieval (no model needed):
+- Recall@k: share of expected passages found in the top k.
+- Precision or mean reciprocal rank: how high the relevant passages rank.
+
+Answer quality:
+- Groundedness: claims are supported by the provided passages.
+- Citation correctness: cited ids exist and support the claim.
+- Abstention correctness: unanswerable questions produce the insufficient-evidence response.
+
+Record latency and cost per query alongside quality.
+
+## Procedure
+
+1. Run the evaluation on the current main branch to get a baseline. Record the index version, configuration, and model identifiers.
+2. Apply the change and run the same evaluation with the same set and settings.
+3. Compare the metrics. Investigate every regressed case individually; aggregate numbers hide failures.
+4. If any model-graded metric is used, spot-check a sample of its judgments by hand.
+5. Report baseline vs. change for each metric, the regressed cases, and a merge recommendation in the pull request.
+
+A change that improves one metric while regressing abstention or citation correctness needs an explicit human decision before merge.

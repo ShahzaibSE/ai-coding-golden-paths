@@ -1,0 +1,35 @@
+# Security Standards
+
+## Secrets
+
+- Secrets never appear in source code, tests, fixtures, logs, commit messages, or documentation.
+- Load secrets from the environment or a secret manager at runtime. Commit only an example file with placeholder values.
+- If a secret is committed, treat it as compromised: rotate it first, then remove it from history.
+
+## Untrusted input
+
+- Treat all external input as untrusted: request bodies, headers, query strings, files, environment of other systems, and model output.
+- Validate input at the boundary against an explicit schema (type, length, range, format). Reject, do not repair.
+- Use parameterized queries. Never build SQL, shell commands, or file paths by concatenating input.
+- Encode output for its context (HTML, URL, shell, SQL) at the point of use.
+
+## Access
+
+- Authenticate every entry point that is not explicitly public. Default to deny.
+- Authorize every operation on the server side against the resource being accessed, not just the route.
+- Grant the least privilege needed: service accounts, database roles, tokens, and file permissions.
+
+## Dependencies
+
+- Add dependencies deliberately. Prefer well-maintained packages with a clear owner.
+- Pin versions with a lockfile. Review dependency updates like code changes.
+
+## Errors and logging
+
+- Never expose stack traces, internal identifiers, or configuration to end users.
+- Log security-relevant events (authentication failures, permission denials) without logging the secrets or personal data involved.
+
+## When unsure
+
+- Stop and flag any change that touches authentication, authorization, cryptography, or payment flows for explicit human review.
+- Do not implement custom cryptography. Use the platform's vetted libraries.

@@ -1,0 +1,37 @@
+# Written by ai-coding-golden-paths. Records what was generated so re-runs never overwrite your edits.
+# Nothing reads this at runtime; it is safe to commit.
+generator: ai-coding-golden-paths
+generator_version: 0.1.0
+project_name: fastapi-rag
+preset: fastapi-rag
+profiles:
+- id: runtime/python-backend
+  version: 0.1.0
+- id: runtime/fastapi
+  version: 0.1.0
+- id: ai/rag
+  version: 0.1.0
+tools:
+- claude
+- codex
+files:
+  .claude/agents/code-reviewer.md: bebee369223ab7e580c6afc7e93e0745e9320f7f996b68ef2cda1136cea07d82
+  .claude/rules/fastapi.md: 70625344aaa3a49c53870faae7b06c13854908eea339834b650f39aeb0f69271
+  .claude/rules/python-backend.md: 97e0d45cd523a59d071f2e5516079c91f379dfbc72a5085be757878e41777f4b
+  .claude/skills/code-review/SKILL.md: 5768e5cf39bb21d60d2889233b074796bf0fb2e19357964ad5cada523badcc99
+  .claude/skills/implementation/SKILL.md: 99cede721c7bf1aafd31f5f6a7416897218f28c5b115daae39f39fcdd905d696
+  .claude/skills/retrieval-evaluation/SKILL.md: 3d626b13ecfa8df9a48a1f4b426f028cae9a30034a5793c42aba08e9eb6094d0
+  AGENTS.md: 808f2a8b6f9ebf51647f141a172d0b26a9f130e8c68c122eef49df017ec075cd
+  CLAUDE.md: 28c34b4eac58d975dc48a821d3cae4015d0a5b583dd5c5e71a930c49da02b816
+  docs/engineering/README.md: 71ad39f72af5f070da7983502a2f0edf3493b81714834b756a3a810cd8a21769
+  docs/engineering/governance/privacy-baseline.md: a929467b47dad552a01b3160f56b8f596cf911c9649e4bcb42f679edff0478b7
+  docs/engineering/profiles/fastapi.md: b12b0ff0bf04687caae91d790807bf40e4f9283e8d8fd6f3458e4dfb7dd26d36
+  docs/engineering/profiles/python-backend.md: e6cf71aeffaa33ca8ed0c4807e4519dd384f2058e39d8e904ac4d4aec4272a7b
+  docs/engineering/profiles/rag.md: 42e4cf4138a7e63f7c3df497e6f0b1daaadc39a99b58ea20c9c33151bf82c049
+  docs/engineering/standards/engineering.md: d3335b6ad994e2e00c45814fc0739af7a6b71dba0c74346699d65fcd7ce9f1a6
+  docs/engineering/standards/git-workflow.md: 14e9282025edb9b26619b7694e4ad35e2de323f9c41bad2aab42d5e4bb026666
+  docs/engineering/standards/security.md: 9e3699586dbe6cb54ca5d8c321a5bfc828d11fd015f48cb563b8973c8f12f048
+  docs/engineering/standards/testing.md: d392f242021d50507611dd4daed978f1776b1e3508b5f34d255bd27971e03e12
+  docs/engineering/workflows/code-review.md: 765f97a34a40dec1c14d48f2be331ec160ef0487ad7779c1a78a548b4aeabf2f
+  docs/engineering/workflows/implementation.md: b8a1440b4a0532afe1c18d6f5ec44b3f291008d48f4ee6521e60ec377eb230be
+  docs/engineering/workflows/retrieval-evaluation.md: 61e673b325662f5295adfe9578bb99666da50437366c8b95e3f48d0b2ab4265b

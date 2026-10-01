@@ -1,0 +1,12 @@
+name: python-backend
+version: 0.1.0
+category: runtime
+description: Framework-agnostic Python backend services - conventions, service boundaries, errors, async, and testing.
+summary:
+  - Type-annotate all public functions; keep the type checker clean.
+  - Keep transport (HTTP, queues, CLI) thin; business logic lives in framework-free service modules.
+  - Never block the event loop in async code; run blocking work in a thread or process pool.
+  - Tests use pytest; dependencies are injected so services can be tested without the network.
+applies_to:
+  - "**/*.py"
+  - "pyproject.toml"

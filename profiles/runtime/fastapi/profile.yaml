@@ -1,0 +1,12 @@
+name: fastapi
+version: 0.1.0
+category: runtime
+description: FastAPI-specific HTTP layer conventions on top of the python-backend profile.
+summary:
+  - Routers stay thin - validate with request/response models, then call a service.
+  - Wire dependencies with Depends(); override them in tests instead of patching.
+  - Use async route handlers only when the whole call path is non-blocking.
+applies_to:
+  - "**/*.py"
+requires:
+  - runtime/python-backend
