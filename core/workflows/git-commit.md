@@ -1,0 +1,26 @@
+# Git Commit Workflow
+
+Use to record one logical change as a safe, local, atomic commit. This workflow never pushes.
+
+## Procedure
+
+1. Inspect the repository state (follow the git-review workflow for branch, status, and suspicious changes).
+2. Decide the one logical change being committed. If the working tree mixes unrelated changes, commit only the intended group and report what is left.
+3. Check the branch against the project's branch policy in `standards/git-workflow.md`. If the repository clearly follows a branch and pull request workflow, do not commit on the default branch; ask for a branch name instead. If the policy is unclear, ask before committing there.
+4. Run the relevant validation where practical (follow the run-tests workflow, preferring focused checks). Do not commit a change whose validation fails unless the user explicitly accepts it.
+5. Stage only the files that belong to the change, by explicit path. Do not use `git add .` or `git add -A` unless every changed file belongs to the change and you say why.
+6. Review the staged diff for secrets and machine-specific files.
+7. Choose the message format: read recent history and follow an established convention; otherwise use Conventional Commits. Write an imperative subject and a body that explains why.
+8. Create the commit. Do not skip hooks.
+9. Report the commit hash, the subject, and the files included, plus any changes deliberately left uncommitted.
+
+## Safety
+
+- Never push, force anything, or change a remote.
+- No `reset --hard`, destructive `clean`, rebase, amend of an existing commit, or branch deletion unless the user explicitly asks.
+- Stop and ask when the state is ambiguous: mid-rebase or mid-merge, detached HEAD, or conflicts.
+
+## Success and failure
+
+- Success: exactly one new commit exists, containing only the intended files, and the report lists its hash and files.
+- Failure: if validation fails, a hook rejects the commit, or the state is ambiguous, create nothing and report why.

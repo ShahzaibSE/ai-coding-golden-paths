@@ -1,0 +1,22 @@
+# Run Tests Workflow
+
+Use to find and run the project's validation: tests, linters, and type checks.
+
+## Procedure
+
+1. Read the Commands section of `PROJECT.md`. Use the commands it lists.
+2. If a command is missing, inspect project configuration (package manifests, task runners, build files, CI configuration) to find the test, lint, and type-check commands. Do not guess a command that nothing in the project supports.
+3. Choose the scope. When the changed files make the affected area clear, run focused tests for it first; run the full suite when the change is broad, shared, or unclear, or before a release.
+4. Run lint and type checks the project defines, in addition to tests.
+5. Report each command run with its result. For failures, give the failing test or check, the message, and the likely cause.
+
+## Rules
+
+- Do not change application behavior, weaken assertions, or skip tests just to make validation pass.
+- Do not install dependencies or change configuration unless the user asks.
+- If tests fail for reasons unrelated to the change, say so and show the evidence.
+
+## Success and failure
+
+- Success: every applicable command ran, and the report separates what passed, what failed, and what could not be run.
+- Failure: if no validation command can be found, report that instead of claiming success.

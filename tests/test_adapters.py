@@ -41,7 +41,10 @@ def test_claude_outputs(comp):
 
     for wf in comp.workflows:
         meta = frontmatter(files[f".claude/skills/{wf.id}/SKILL.md"])
-        assert meta == {"name": wf.id, "description": wf.description}
+        expected = {"name": wf.id, "description": wf.description}
+        if wf.id in ("git-commit", "git-release"):
+            expected["disable-model-invocation"] = True
+        assert meta == expected
 
     agent = frontmatter(files[".claude/agents/code-reviewer.md"])
     assert agent["name"] == "code-reviewer" and "Edit" not in agent["tools"]

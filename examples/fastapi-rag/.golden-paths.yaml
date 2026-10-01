@@ -19,19 +19,27 @@ files:
   .claude/rules/fastapi.md: 70625344aaa3a49c53870faae7b06c13854908eea339834b650f39aeb0f69271
   .claude/rules/python-backend.md: 97e0d45cd523a59d071f2e5516079c91f379dfbc72a5085be757878e41777f4b
   .claude/skills/code-review/SKILL.md: 5768e5cf39bb21d60d2889233b074796bf0fb2e19357964ad5cada523badcc99
+  .claude/skills/git-commit/SKILL.md: 32dd18c9e0b2c8fa068f97f4cad515d465ef36c74b9634391b82a12ac0e219ca
+  .claude/skills/git-release/SKILL.md: 98e38e26f9457477d9939720e0a3a9d96adf7bd3b84c1a0dc92f6a3ae78b2a39
+  .claude/skills/git-review/SKILL.md: fa5d7409b92c2df349eb232a647f8acffefde74e3f6dcdecd7e63410aa696b83
   .claude/skills/implementation/SKILL.md: 99cede721c7bf1aafd31f5f6a7416897218f28c5b115daae39f39fcdd905d696
   .claude/skills/retrieval-evaluation/SKILL.md: 3d626b13ecfa8df9a48a1f4b426f028cae9a30034a5793c42aba08e9eb6094d0
-  AGENTS.md: 808f2a8b6f9ebf51647f141a172d0b26a9f130e8c68c122eef49df017ec075cd
-  CLAUDE.md: 28c34b4eac58d975dc48a821d3cae4015d0a5b583dd5c5e71a930c49da02b816
-  docs/engineering/README.md: 71ad39f72af5f070da7983502a2f0edf3493b81714834b756a3a810cd8a21769
+  .claude/skills/run-tests/SKILL.md: 92f36b0388dbc6412fc21f94da5423869fb88b35c371d25ade15a0fdfba55851
+  AGENTS.md: f86e196ee2d95c35371aa5685a6eca98603ea8181918e9ea699d751d6a788623
+  CLAUDE.md: c281f43eec5559e945a9306d7d48e055822d471c186beb4e8e656fe857f7b994
+  docs/engineering/README.md: 5de91d67ddadedffbd2163d4240b7b9a2655606c1d21ef8e565e161a444474f3
   docs/engineering/governance/privacy-baseline.md: a929467b47dad552a01b3160f56b8f596cf911c9649e4bcb42f679edff0478b7
   docs/engineering/profiles/fastapi.md: b12b0ff0bf04687caae91d790807bf40e4f9283e8d8fd6f3458e4dfb7dd26d36
   docs/engineering/profiles/python-backend.md: e6cf71aeffaa33ca8ed0c4807e4519dd384f2058e39d8e904ac4d4aec4272a7b
   docs/engineering/profiles/rag.md: 42e4cf4138a7e63f7c3df497e6f0b1daaadc39a99b58ea20c9c33151bf82c049
   docs/engineering/standards/engineering.md: d3335b6ad994e2e00c45814fc0739af7a6b71dba0c74346699d65fcd7ce9f1a6
-  docs/engineering/standards/git-workflow.md: 14e9282025edb9b26619b7694e4ad35e2de323f9c41bad2aab42d5e4bb026666
+  docs/engineering/standards/git-workflow.md: 2beaaa47d220f35c123371fb16d74dd4e38774db5bec1215b246663cd9ebde60
   docs/engineering/standards/security.md: 9e3699586dbe6cb54ca5d8c321a5bfc828d11fd015f48cb563b8973c8f12f048
   docs/engineering/standards/testing.md: d392f242021d50507611dd4daed978f1776b1e3508b5f34d255bd27971e03e12
-  docs/engineering/workflows/code-review.md: 765f97a34a40dec1c14d48f2be331ec160ef0487ad7779c1a78a548b4aeabf2f
+  docs/engineering/workflows/code-review.md: 751e3bbf3af2aa7445742c72068d5bc4cb6745bfb54a9f1c41da7edf931a36b5
+  docs/engineering/workflows/git-commit.md: 771347c95a552d2811b3e67fdf464625ff6516004aa184861666f9afd489607e
+  docs/engineering/workflows/git-release.md: 27a151df55ec46e16f03cb1b121b59ffa9fec05b8c093aaeeb504cab9ddb2373
+  docs/engineering/workflows/git-review.md: d6e3dc1bbea01d97e0a4e72134fed3678af81f30527d3cea76f0a3d584c36ed7
   docs/engineering/workflows/implementation.md: b8a1440b4a0532afe1c18d6f5ec44b3f291008d48f4ee6521e60ec377eb230be
   docs/engineering/workflows/retrieval-evaluation.md: 61e673b325662f5295adfe9578bb99666da50437366c8b95e3f48d0b2ab4265b
+  docs/engineering/workflows/run-tests.md: cafda6f4681d043a0fd0f13afc3ea9ff85df666ffd9365ca8e6c7a06e527b73b

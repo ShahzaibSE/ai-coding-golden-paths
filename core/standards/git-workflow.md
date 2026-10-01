@@ -2,13 +2,14 @@
 
 ## Branches
 
-- Never commit directly to the default branch. Work on a short-lived branch named for its purpose (for example `fix/login-timeout`).
+- When the repository follows a branch and pull request workflow, never commit directly to the default branch. Work on a short-lived branch named for its purpose (for example `fix/login-timeout`). If the repository's policy is unclear, ask before committing to the default branch.
 - Keep branches small and current; rebase or merge from the default branch frequently.
 
 ## Commits
 
 - Each commit is one logical change that builds and passes tests.
 - Commit messages: a short imperative subject line (about 50 characters), a blank line, then a body explaining why the change was made.
+- Use Conventional Commits unless the repository's existing commit history establishes another convention. Check recent history first and follow an established convention.
 - Do not mix formatting-only changes with behavior changes.
 - Never commit generated build output, local environment files, or editor/machine-specific files.
 

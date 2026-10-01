@@ -22,3 +22,15 @@ workflows:
   - id: code-review
     file: workflows/code-review.md
     description: Use to review a diff or pull request against the project's standards and active profiles before it is merged.
+  - id: git-review
+    file: workflows/git-review.md
+    description: Use to inspect the current Git state read-only - branch, staged, unstaged, and untracked changes - and flag suspicious files, secrets, and how to group the changes.
+  - id: git-commit
+    file: workflows/git-commit.md
+    description: Use only when asked to create a local atomic commit of the intended change. Validates, stages explicit files, and commits; never pushes.
+  - id: git-release
+    file: workflows/git-release.md
+    description: Use only when asked to commit and push a change. Reviews, validates, commits atomically, and pushes to the existing upstream without force.
+  - id: run-tests
+    file: workflows/run-tests.md
+    description: Use to find and run the project's tests, linters, and type checks, preferring focused tests when the changed scope is clear.

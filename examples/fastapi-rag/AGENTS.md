@@ -49,6 +49,10 @@ Follow the matching workflow document for these tasks:
 
 - **implementation** (`docs/engineering/workflows/implementation.md`): Use for any non-trivial change - features, bug fixes, refactors - to plan, implement, test, and verify in small steps.
 - **code-review** (`docs/engineering/workflows/code-review.md`): Use to review a diff or pull request against the project's standards and active profiles before it is merged.
+- **git-review** (`docs/engineering/workflows/git-review.md`): Use to inspect the current Git state read-only - branch, staged, unstaged, and untracked changes - and flag suspicious files, secrets, and how to group the changes.
+- **git-commit** (`docs/engineering/workflows/git-commit.md`): Use only when asked to create a local atomic commit of the intended change. Validates, stages explicit files, and commits; never pushes.
+- **git-release** (`docs/engineering/workflows/git-release.md`): Use only when asked to commit and push a change. Reviews, validates, commits atomically, and pushes to the existing upstream without force.
+- **run-tests** (`docs/engineering/workflows/run-tests.md`): Use to find and run the project's tests, linters, and type checks, preferring focused tests when the changed scope is clear.
 - **retrieval-evaluation** (`docs/engineering/workflows/retrieval-evaluation.md`): Use when changing chunking, embeddings, indexing, retrieval, ranking, or prompts that consume retrieved context, to measure the impact before merging.
 
 For multi-step or risky changes, write the plan described in `docs/engineering/workflows/implementation.md` before writing code, and keep it updated as you work.

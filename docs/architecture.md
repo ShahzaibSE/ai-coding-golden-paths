@@ -57,6 +57,8 @@ Rationale: [ADR-0003](decisions/adr-0003-adapter-pattern-for-coding-agents.md). 
 | `.claude/skills/<workflow>/SKILL.md` | One per workflow; directs the agent to the neutral workflow document |
 | `.claude/agents/code-reviewer.md` | Read-only reviewer that follows the code-review workflow |
 
+**Workflow to skill to slash command.** A workflow is written once in `core/workflows/` and copied to `docs/engineering/workflows/`. The adapter wraps it in a thin skill whose name is the workflow id, which gives the `/<id>` command. The skill body only points at the neutral document. Claude-specific behavior stays in the adapter: for example, `git-commit` and `git-release` change repository state, so their skills set `disable-model-invocation` and run only when invoked explicitly. Codex lists the same workflows in `AGENTS.md`. See [ADR-0003](decisions/adr-0003-adapter-pattern-for-coding-agents.md) and [ADR-0006](decisions/adr-0006-single-neutral-knowledge-tree.md).
+
 No hooks are generated in v0.1: no candidate was both deterministic and toolchain-neutral, and Codex has no equivalent mechanism.
 
 ### Codex (`adapters/codex/`)

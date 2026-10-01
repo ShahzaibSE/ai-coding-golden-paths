@@ -44,10 +44,14 @@ Profiles with file scopes load automatically through `.claude/rules/` when you t
 
 ## Workflows
 
-Use these skills for multi-step procedures:
+Available workflows (each is a skill; its description says when to use it):
 
-- `/implementation` - Use for any non-trivial change - features, bug fixes, refactors - to plan, implement, test, and verify in small steps.
-- `/code-review` - Use to review a diff or pull request against the project's standards and active profiles before it is merged.
-- `/retrieval-evaluation` - Use when changing chunking, embeddings, indexing, retrieval, ranking, or prompts that consume retrieved context, to measure the impact before merging.
+- `/implementation`
+- `/code-review`
+- `/git-review`
+- `/git-commit`
+- `/git-release`
+- `/run-tests`
+- `/retrieval-evaluation`
 
 Use the `code-reviewer` agent to review a finished change before reporting it done.

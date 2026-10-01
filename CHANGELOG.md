@@ -2,6 +2,16 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow semantic versioning.
 
+## [Unreleased]
+
+### Added
+- Core workflows `git-review`, `git-commit`, `git-release`, and `run-tests`, exposed as Claude skills (`/git-review`, ...). `git-commit` and `git-release` require explicit invocation.
+
+### Changed
+- `code-review` workflow: report-only, maintainability and complexity checks.
+- Git standard: Conventional Commits unless history shows another convention; default-branch rule depends on the repository's branch policy.
+- `CLAUDE.md` lists workflow ids only; skill metadata holds the descriptions.
+
 ## [0.1.0] - 2026-10-01
 
 ### Added

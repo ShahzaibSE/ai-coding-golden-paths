@@ -25,4 +25,8 @@ Coding-agent instruction files only point here; switching agents does not change
 
 - [implementation](workflows/implementation.md) - Use for any non-trivial change - features, bug fixes, refactors - to plan, implement, test, and verify in small steps.
 - [code-review](workflows/code-review.md) - Use to review a diff or pull request against the project's standards and active profiles before it is merged.
+- [git-review](workflows/git-review.md) - Use to inspect the current Git state read-only - branch, staged, unstaged, and untracked changes - and flag suspicious files, secrets, and how to group the changes.
+- [git-commit](workflows/git-commit.md) - Use only when asked to create a local atomic commit of the intended change. Validates, stages explicit files, and commits; never pushes.
+- [git-release](workflows/git-release.md) - Use only when asked to commit and push a change. Reviews, validates, commits atomically, and pushes to the existing upstream without force.
+- [run-tests](workflows/run-tests.md) - Use to find and run the project's tests, linters, and type checks, preferring focused tests when the changed scope is clear.
 - [retrieval-evaluation](workflows/retrieval-evaluation.md) - Use when changing chunking, embeddings, indexing, retrieval, ranking, or prompts that consume retrieved context, to measure the impact before merging.

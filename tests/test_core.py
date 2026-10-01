@@ -16,7 +16,7 @@ def test_core_loads_with_documents_and_workflows():
         "standards/git-workflow.md",
         "governance/privacy-baseline.md",
     }
-    assert [wf.id for wf in core.workflows] == ["implementation", "code-review"]
+    assert [wf.id for wf in core.workflows] == ["implementation", "code-review", "git-review", "git-commit", "git-release", "run-tests"]
     assert core.summary, "core must provide an operating-contract summary"
 
 

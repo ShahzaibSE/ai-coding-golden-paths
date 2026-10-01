@@ -112,6 +112,20 @@ dry run: nothing was written.
 
 The full rules are in [Architecture: Safe writing](architecture.md#safe-writing).
 
+## Workflows
+
+Every project gets these workflows as documents in `docs/engineering/workflows/`. With `--tool claude` they are also skills:
+
+| Command | Does |
+|---------|------|
+| `/git-review` | Read-only inspection of branch, changes, and suspicious files |
+| `/git-commit` | Validates and creates a local atomic commit. It does **not** push |
+| `/git-release` | Validates, commits atomically, and **pushes** to the configured upstream. Never forces |
+| `/run-tests` | Finds and runs the project's tests, linters, and type checks |
+| `/code-review` | Reviews the current changes; does not edit code |
+
+Claude may select `/git-review`, `/run-tests`, and `/code-review` on its own when they fit the request. `/git-commit` and `/git-release` change Git state, so they run only when you type them. Any workflow can be invoked by name. With Codex the same workflows are listed in `AGENTS.md`.
+
 ## Personal context
 
 Keep personal paths, sandbox URLs, and preferences out of generated files. Put them in `~/.claude/CLAUDE.md`, a git-ignored `CLAUDE.local.md`, or `~/.codex/AGENTS.md`. See [Personal context](personal-context.md).

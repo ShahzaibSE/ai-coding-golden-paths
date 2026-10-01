@@ -1,6 +1,6 @@
 # Code Review Workflow
 
-Use to review a diff or pull request before merge. Review the change, not the author.
+Use to review a diff or pull request before merge. Review the change, not the author. Do not edit code unless explicitly asked; report findings only.
 
 ## Procedure
 
@@ -23,9 +23,10 @@ Security and privacy
 - Is new input validated at the boundary? Any injection, authorization, or secret-handling risk?
 - Is personal data logged, sent to a new recipient, or retained without a defined period?
 
-Design
+Design and maintainability
 - Is the change minimal and focused? Does it reuse existing code instead of duplicating it?
 - Does it follow the conventions of the surrounding code and the active profiles?
+- Is there unnecessary complexity, such as abstraction or configuration nothing needs yet?
 
 Operations
 - Are configuration, migrations, and documentation updated?
@@ -33,4 +34,4 @@ Operations
 
 ## Reporting findings
 
-For each finding give: severity (blocking / should-fix / nit), location (file and line), the problem, a concrete failure scenario, and a suggested fix. State explicitly when no blocking issues were found. Do not invent findings to appear thorough.
+For each finding give: severity (blocking / should-fix / nit), location (file and line), the problem, a concrete failure scenario, and a suggested fix. State explicitly when no blocking issues were found. Prefer actionable findings over stylistic preferences. Do not invent findings to appear thorough.
