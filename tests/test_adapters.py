@@ -79,3 +79,18 @@ def test_rendering_is_deterministic(tool):
 def test_adapters_contain_no_absolute_paths(comp):
     for f in render_all(comp, ["claude", "codex"]):
         assert not re.search(r"(/Users/|/home/|[A-Za-z]:\\)", f.content), f.path
+
+
+def test_claude_project_context_files(comp):
+    files = by_path(load_adapter("claude").render(comp))
+    assert {"MEMORY.md", "STATE.md"} <= set(files)
+    assert "MEMORY.md" not in by_path(load_adapter("codex").render(comp))
+
+    claude_md = files["CLAUDE.md"]
+    assert "`MEMORY.md` (curated durable project knowledge)" in claude_md
+    assert "`STATE.md` (current resumable work state)" in claude_md
+    assert "auto-memory" not in claude_md.lower()
+
+    assert "## Architecture Decisions" in files["MEMORY.md"] and "## Lessons" in files["MEMORY.md"]
+    assert "## Current Focus" in files["STATE.md"] and "## Blockers" in files["STATE.md"]
+    assert "use `STATE.md`" in files["MEMORY.md"] and "belongs in `MEMORY.md`" in files["STATE.md"]
