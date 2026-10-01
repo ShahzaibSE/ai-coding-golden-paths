@@ -4,6 +4,14 @@
 Project context (architecture, commands, decisions):
 @docs/engineering/PROJECT.md
 
+## Project Context
+
+- Consult `MEMORY.md` (curated durable project knowledge) when it is relevant.
+- Consult `STATE.md` (current resumable work state) when resuming or continuing implementation work.
+- Update `STATE.md` when meaningful project state changes.
+- Add to `MEMORY.md` only when information is durable and useful across future sessions.
+- Keep both files concise. Do not use them as transcripts, scratchpads, or context dumps.
+
 ## Operating contract
 
 - Read docs/engineering/PROJECT.md before changing anything; keep it current when architecture or commands change.

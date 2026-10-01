@@ -26,7 +26,9 @@ files:
   .claude/skills/retrieval-evaluation/SKILL.md: 3d626b13ecfa8df9a48a1f4b426f028cae9a30034a5793c42aba08e9eb6094d0
   .claude/skills/run-tests/SKILL.md: 92f36b0388dbc6412fc21f94da5423869fb88b35c371d25ade15a0fdfba55851
   AGENTS.md: f86e196ee2d95c35371aa5685a6eca98603ea8181918e9ea699d751d6a788623
-  CLAUDE.md: c281f43eec5559e945a9306d7d48e055822d471c186beb4e8e656fe857f7b994
+  CLAUDE.md: cb7642628873eff82398be803f2fdc1e6dc6a9483685d9417c2a39e8cad7823c
+  MEMORY.md: 36f00e8dff0bd7f14708c7fbc739faf1e4c533292e17c1443f40b4fe507f0ddc
+  STATE.md: 2e7c6760712552c6e4acd71f6cba380766286ccf6ad9e87180d82e6601cd72b7
   docs/engineering/README.md: 5de91d67ddadedffbd2163d4240b7b9a2655606c1d21ef8e565e161a444474f3
   docs/engineering/governance/privacy-baseline.md: a929467b47dad552a01b3160f56b8f596cf911c9649e4bcb42f679edff0478b7
   docs/engineering/profiles/fastapi.md: b12b0ff0bf04687caae91d790807bf40e4f9283e8d8fd6f3458e4dfb7dd26d36

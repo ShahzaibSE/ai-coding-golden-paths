@@ -81,6 +81,14 @@ def render(comp: Composition) -> list[OutputFile]:
             )
         )
 
+    for name in ("MEMORY.md", "STATE.md"):
+        files.append(
+            OutputFile(
+                name,
+                _template(f"{name}.tmpl").substitute(generated_note=NOTE, project_name=comp.project_name),
+            )
+        )
+
     files.append(
         OutputFile(
             ".claude/agents/code-reviewer.md",
