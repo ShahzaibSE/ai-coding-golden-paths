@@ -40,6 +40,7 @@ Pick one profile per technology or domain the project actually uses:
 | Any Python service | `runtime/python-backend` |
 | A FastAPI service | `runtime/fastapi` (adds `python-backend` automatically) |
 | A Next.js App Router frontend | `runtime/nextjs` |
+| A client-only React single-page app built with Vite | `runtime/react-vite` (cannot be combined with `runtime/nextjs`) |
 | Retrieval over documents (search, Q&A, citations) | `ai/rag` |
 | A model that calls tools in a loop | `ai/agentic-ai` |
 
@@ -57,6 +58,7 @@ A preset is a shortcut for a common profile list:
 |--------|--------|
 | `fastapi-rag` | python-backend + fastapi + rag |
 | `fullstack-agentic-ai` | python-backend + nextjs + agentic-ai |
+| `react-vite-frontend` | react-vite |
 
 You can combine a preset with extra profiles. Duplicates are ignored:
 

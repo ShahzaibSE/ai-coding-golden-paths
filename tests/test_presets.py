@@ -19,6 +19,15 @@ def test_fullstack_agentic_ai_resolution():
     assert ids(preset="fullstack-agentic-ai")[0] == ["runtime/python-backend", "runtime/nextjs", "ai/agentic-ai"]
 
 
+def test_react_vite_frontend_resolution():
+    assert ids(preset="react-vite-frontend")[0] == ["runtime/react-vite"]
+
+
+def test_react_vite_cannot_be_combined_with_nextjs_via_preset():
+    with pytest.raises(CompositionError, match="declares a conflict"):
+        ids(preset="react-vite-frontend", profiles=["runtime/nextjs"])
+
+
 def test_presets_contain_only_composition_keys():
     for preset in discover_presets(REPO_ROOT / "presets").values():
         assert preset.profiles

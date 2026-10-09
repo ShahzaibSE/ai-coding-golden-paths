@@ -65,12 +65,14 @@ This is tested, not assumed. [`tests/test_fallback.py`](tests/test_fallback.py) 
 | `runtime/python-backend` | Python conventions, typing, service layering, error handling, async, pytest conventions (framework-agnostic) |
 | `runtime/fastapi` | FastAPI app factory, models, `Depends`, error handlers, sync vs async handlers, testing. Requires `python-backend` |
 | `runtime/nextjs` | TypeScript, App Router architecture, server/client boundaries, components, testing |
+| `runtime/react-vite` | Client-only React single-page app with Vite: TypeScript, feature-oriented structure, state placement, accessibility, testing. Conflicts with `runtime/nextjs` |
 | `ai/rag` | Ingestion, retrieval, context assembly, grounding, insufficient evidence, source attribution, plus a retrieval-evaluation workflow |
 | `ai/agentic-ai` | Tool boundaries, orchestration, state, failure handling, human checkpoints, plus an agent-evaluation workflow |
 
 Presets:
 - `fastapi-rag` = python-backend + fastapi + rag
 - `fullstack-agentic-ai` = python-backend + nextjs + agentic-ai
+- `react-vite-frontend` = react-vite
 
 ## Quickstart
 

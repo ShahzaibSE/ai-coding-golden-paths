@@ -5,6 +5,7 @@ All notable changes to this project are documented here. The format follows [Kee
 ## [Unreleased]
 
 ### Added
+- Profile `runtime/react-vite` (client-only React + Vite single-page app) and preset `react-vite-frontend`. The profile declares a conflict with `runtime/nextjs`; the profile-pair composition test now excludes only declared-conflict pairs and a new test asserts those pairs are rejected in both selection orders.
 - Core workflows `git-review`, `git-commit`, `git-release`, and `run-tests`, exposed as Claude skills (`/git-review`, ...). `git-commit` and `git-release` require explicit invocation.
 
 ### Changed

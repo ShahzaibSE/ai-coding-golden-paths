@@ -45,7 +45,7 @@ Every field is tool-neutral. Adapters decide how to render each one: `applies_to
 2. **Vendor-neutral.** No coding-agent names, instruction-file names, or model-provider names. Validation enforces this.
 3. **No machine specifics.** No absolute paths, hostnames, credentials, or personal preferences.
 4. **Additive only.** A profile may add workflows. It may not replace or patch a core workflow or another profile's content. If two profiles genuinely cannot coexist, declare `conflicts`.
-5. **Composable alone.** A profile works with only its `requires`. Tests compose every profile alone and in every pair.
+5. **Composable alone.** A profile works with only its `requires`. Tests compose every profile alone and every compatible pair. Every pair declared incompatible through `conflicts` is verified to fail composition, in both selection orders. A declared conflict never excuses an unrelated composition failure.
 6. **Actionable and short.** Write rules an engineer can check in review, not tutorials. Aim for 40-120 lines.
 
 ## Presets

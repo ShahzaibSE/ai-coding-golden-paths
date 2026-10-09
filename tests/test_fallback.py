@@ -14,7 +14,7 @@ from bootstrap.init import MANIFEST, run
 
 from tests.conftest import tree
 
-PRESETS = ["fastapi-rag", "fullstack-agentic-ai"]
+PRESETS = ["fastapi-rag", "fullstack-agentic-ai", "react-vite-frontend"]
 TOOLS = available_adapters()
 
 

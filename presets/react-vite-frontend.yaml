@@ -1,0 +1,4 @@
+name: react-vite-frontend
+description: React and TypeScript single-page application built with Vite.
+profiles:
+  - runtime/react-vite

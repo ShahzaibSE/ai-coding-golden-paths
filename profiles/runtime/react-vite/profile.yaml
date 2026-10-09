@@ -1,0 +1,17 @@
+name: react-vite
+version: 0.1.0
+category: runtime
+description: React single-page application built with Vite and TypeScript - feature-oriented structure, state placement, accessible components, and testing.
+summary:
+  - TypeScript strict mode; validate data at module boundaries with a runtime schema.
+  - Organize source by feature; keep a feature's components, hooks, types, and tests together and promote code to shared folders only when a second feature needs it.
+  - Keep state as local as possible; share state only where several features genuinely read it, and derive values during render instead of syncing them in effects.
+  - This is a client-only single-page app; do not introduce server-only concepts or server-rendering assumptions.
+  - Unit-test pure logic, test components by role and accessible name, and keep a few end-to-end tests for critical journeys.
+applies_to:
+  - "**/*.ts"
+  - "**/*.tsx"
+  - "src/**"
+  - "vite.config.*"
+conflicts:
+  - runtime/nextjs
